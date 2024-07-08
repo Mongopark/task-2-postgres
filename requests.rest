@@ -31,7 +31,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI3NDNhO
 ### Add User to Organisation
 POST https://task-2-postgres.vercel.app/api/organisations/1bc718d4-28d8-4f7a-be5a-ac63834586ab/users
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI3NDNhOWUxMS01ODg1LTQ2NmQtYjViYi0xMWI5NmI3NmU4NzgiLCJlbWFpbCI6InNhbWxhcnJ5bWFybGlhbkBnbWFpbC5jb20iLCJpYXQiOjE3MjA1MzA1MTIsImV4cCI6MTcyMDUzMzUxMn0.gOmK18VbBkUgisDlse9G-ECNsFh7oieu5_YqjgyngL4
 
 {
   "userId": "c5aa0d87-0c9d-4388-ba04-7af7e3b383ab"
