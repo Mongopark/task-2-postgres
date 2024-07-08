@@ -1,0 +1,72 @@
+### Get a USER by ID
+GET http://localhost:5500/api/users/af1ef80a-ab9e-48d3-b361-b4010967959a
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiIzZDkwY2E2Ni0xYmY3LTRlYzUtODVmNi02YTBlZTMxMzMzMzkiLCJlbWFpbCI6ImJvYmJ5QGVtYWlsLmNvbSIsImlhdCI6MTcyMDM4ODE1OSwiZXhwIjoxNzIwMzkxMTU5fQ.qWwXTO7yW-1S3gxtufXWiFGwuDeJYO8_jPY1dsldKDA
+
+
+
+### Create a USER 1
+POST http://localhost:5500/api/users
+Content-Type: application/json
+
+{
+  "firstName": "Adam",
+  "lastName": "FirstMan",
+  "email": "samlarrymarlian@email.com",
+  "password": "lileunited",
+  "phone": "07053005601"
+}
+
+
+### Create Organisation
+POST http://localhost:5500/api/organisations
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiIzZDkwY2E2Ni0xYmY3LTRlYzUtODVmNi02YTBlZTMxMzMzMzkiLCJlbWFpbCI6ImJvYmJ5QGVtYWlsLmNvbSIsImlhdCI6MTcyMDM4ODE1OSwiZXhwIjoxNzIwMzkxMTU5fQ.qWwXTO7yW-1S3gxtufXWiFGwuDeJYO8_jPY1dsldKDA
+
+{
+  "name": "Gramme Organisation2",
+  "description": "This is Gram's Second organisation"
+}
+
+### Add User to Organisation
+POST http://localhost:5500/api/organisations/1bc718d4-28d8-4f7a-be5a-ac63834586ab/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiIzZDkwY2E2Ni0xYmY3LTRlYzUtODVmNi02YTBlZTMxMzMzMzkiLCJlbWFpbCI6ImJvYmJ5QGVtYWlsLmNvbSIsImlhdCI6MTcyMDM4ODE1OSwiZXhwIjoxNzIwMzkxMTU5fQ.qWwXTO7yW-1S3gxtufXWiFGwuDeJYO8_jPY1dsldKDA
+
+{
+  "userId": "af1ef80a-ab9e-48d3-b361-b4010967959a"
+}
+
+### Get User Organisations
+GET http://localhost:5500/api/organisations/53651273-bbc1-47d0-a532-b5021e8cb9d4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiIzZDkwY2E2Ni0xYmY3LTRlYzUtODVmNi02YTBlZTMxMzMzMzkiLCJlbWFpbCI6ImJvYmJ5QGVtYWlsLmNvbSIsImlhdCI6MTcyMDM4ODE1OSwiZXhwIjoxNzIwMzkxMTU5fQ.qWwXTO7yW-1S3gxtufXWiFGwuDeJYO8_jPY1dsldKDA
+
+
+
+### Get User Organisations
+GET http://localhost:5500/api/organisations
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiIzZDkwY2E2Ni0xYmY3LTRlYzUtODVmNi02YTBlZTMxMzMzMzkiLCJlbWFpbCI6ImJvYmJ5QGVtYWlsLmNvbSIsImlhdCI6MTcyMDM4ODE1OSwiZXhwIjoxNzIwMzkxMTU5fQ.qWwXTO7yW-1S3gxtufXWiFGwuDeJYO8_jPY1dsldKDA
+
+
+###List USERS
+GET http://localhost:5500/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiIzZDkwY2E2Ni0xYmY3LTRlYzUtODVmNi02YTBlZTMxMzMzMzkiLCJlbWFpbCI6ImJvYmJ5QGVtYWlsLmNvbSIsImlhdCI6MTcyMDM4ODE1OSwiZXhwIjoxNzIwMzkxMTU5fQ.qWwXTO7yW-1S3gxtufXWiFGwuDeJYO8_jPY1dsldKDA
+
+### LOGIN USER
+POST http://localhost:5500/api/auth/login
+Content-Type: application/json
+
+{
+  "email":"bobby@email.com",
+  "password":"bob"
+}
+
+###REFRESH TOKENS
+GET http://localhost:5500/api/auth/refresh_token
+
+###
+
+DELETE http://localhost:5500/api/auth/refresh_token
+###
+
+DELETE http://localhost:5500/api/users
