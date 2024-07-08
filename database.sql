@@ -1,8 +1,6 @@
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
-CREATE DATABASE stagetwo;
-
-CREATE TABLE Users(
+CREATE TABLE IF NOT EXISTS Users(
   userId uuid PRIMARY KEY DEFAULT uuid_generate_v4() UNIQUE,
   firstName TEXT NOT NULL,
   lastName TEXT NOT NULL,
@@ -11,12 +9,18 @@ CREATE TABLE Users(
   phone TEXT NOT NULL
 );
 
-SELECT * FROM users;
+CREATE TABLE IF NOT EXISTS Organisations(
+  orgId uuid PRIMARY KEY DEFAULT uuid_generate_v4() UNIQUE,
+  name TEXT NOT NULL,
+  description TEXT,
+  createdBy uuid REFERENCES Users(userId) ON DELETE CASCADE
+);
 
-INSERT INTO users (firstName,email,user_password,phone) VALUES ('Brad','stephan','brad@email.com','brad','07053007777');
+CREATE TABLE IF NOT EXISTS User_Organisations(
+  userId uuid REFERENCES Users(userId) ON DELETE CASCADE,
+  orgId uuid REFERENCES Organisations(orgId) ON DELETE CASCADE,
+  PRIMARY KEY (userId, orgId)
+);
 
-
---psql -U postgres
---\c stagetwo
---\dt
---heroku pg:psql
+INSERT INTO Users (firstName, lastName, email, password, phone) 
+VALUES ('Brad', 'Stephan', 'brad@email.com', 'brad', '07053007777');
