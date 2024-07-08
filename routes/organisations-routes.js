@@ -108,7 +108,9 @@ router.post('/', authenticateToken, [
 
 
 /* POST add a user to an organisation */
-router.post('/:orgId/users', authenticateToken, [
+router.post('/:orgId/users', 
+  // authenticateToken,
+   [
   body('userId').not().isEmpty().withMessage('UserId is required'),
 ], async (req, res) => {
   try {
