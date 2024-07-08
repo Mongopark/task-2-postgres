@@ -1,12 +1,12 @@
 ### Get a USER RECORD by ID
-GET http://localhost:5500/api/users/af1ef80a-ab9e-48d3-b361-b4010967959a
+GET https://task-2-postgres.vercel.app/api/users/743a9e11-5885-466d-b5bb-11b96b76e878
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiIzZDkwY2E2Ni0xYmY3LTRlYzUtODVmNi02YTBlZTMxMzMzMzkiLCJlbWFpbCI6ImJvYmJ5QGVtYWlsLmNvbSIsImlhdCI6MTcyMDM5NDcwNCwiZXhwIjoxNzIwMzk3NzA0fQ.bCzkAeY4jJ4AW8k3kHDxuvkKz2pjsyTJuMROt__Doc0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI3NDNhOWUxMS01ODg1LTQ2NmQtYjViYi0xMWI5NmI3NmU4NzgiLCJlbWFpbCI6InNhbWxhcnJ5bWFybGlhbkBnbWFpbC5jb20iLCJpYXQiOjE3MjA1MzA1MTIsImV4cCI6MTcyMDUzMzUxMn0.gOmK18VbBkUgisDlse9G-ECNsFh7oieu5_YqjgyngL4
 
 
 
 ### Create a USER 1
-POST http://localhost:5500/api/users
+POST https://task-2-postgres.vercel.app/auth/register
 Content-Type: application/json
 
 {
@@ -19,9 +19,9 @@ Content-Type: application/json
 
 
 ### Create Organisation
-POST http://localhost:5500/api/organisations
+POST https://task-2-postgres.vercel.app/api/organisations
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiIzZDkwY2E2Ni0xYmY3LTRlYzUtODVmNi02YTBlZTMxMzMzMzkiLCJlbWFpbCI6ImJvYmJ5QGVtYWlsLmNvbSIsImlhdCI6MTcyMDM5NDcwNCwiZXhwIjoxNzIwMzk3NzA0fQ.bCzkAeY4jJ4AW8k3kHDxuvkKz2pjsyTJuMROt__Doc0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI3NDNhOWUxMS01ODg1LTQ2NmQtYjViYi0xMWI5NmI3NmU4NzgiLCJlbWFpbCI6InNhbWxhcnJ5bWFybGlhbkBnbWFpbC5jb20iLCJpYXQiOjE3MjA1MzA1MTIsImV4cCI6MTcyMDUzMzUxMn0.gOmK18VbBkUgisDlse9G-ECNsFh7oieu5_YqjgyngL4
 
 {
   "name": "Gramme Organisation2",
@@ -29,31 +29,31 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiIzZDkwY
 }
 
 ### Add User to Organisation
-POST http://localhost:5500/api/organisations/1bc718d4-28d8-4f7a-be5a-ac63834586ab/users
+POST https://task-2-postgres.vercel.app/api/organisations/1bc718d4-28d8-4f7a-be5a-ac63834586ab/users
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiIzZDkwY2E2Ni0xYmY3LTRlYzUtODVmNi02YTBlZTMxMzMzMzkiLCJlbWFpbCI6ImJvYmJ5QGVtYWlsLmNvbSIsImlhdCI6MTcyMDM5NDcwNCwiZXhwIjoxNzIwMzk3NzA0fQ.bCzkAeY4jJ4AW8k3kHDxuvkKz2pjsyTJuMROt__Doc0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI3NDNhOWUxMS01ODg1LTQ2NmQtYjViYi0xMWI5NmI3NmU4NzgiLCJlbWFpbCI6InNhbWxhcnJ5bWFybGlhbkBnbWFpbC5jb20iLCJpYXQiOjE3MjA1MzA1MTIsImV4cCI6MTcyMDUzMzUxMn0.gOmK18VbBkUgisDlse9G-ECNsFh7oieu5_YqjgyngL4
 
 {
   "userId": "c5aa0d87-0c9d-4388-ba04-7af7e3b383ab"
 }
 
 ### Get Single Organisation
-GET http://localhost:5500/api/organisations/1bc718d4-28d8-4f7a-be5a-ac63834586ab
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiIzZDkwY2E2Ni0xYmY3LTRlYzUtODVmNi02YTBlZTMxMzMzMzkiLCJlbWFpbCI6ImJvYmJ5QGVtYWlsLmNvbSIsImlhdCI6MTcyMDM5NDcwNCwiZXhwIjoxNzIwMzk3NzA0fQ.bCzkAeY4jJ4AW8k3kHDxuvkKz2pjsyTJuMROt__Doc0
+GET https://task-2-postgres.vercel.app/api/organisations/1bc718d4-28d8-4f7a-be5a-ac63834586ab
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI3NDNhOWUxMS01ODg1LTQ2NmQtYjViYi0xMWI5NmI3NmU4NzgiLCJlbWFpbCI6InNhbWxhcnJ5bWFybGlhbkBnbWFpbC5jb20iLCJpYXQiOjE3MjA1MzA1MTIsImV4cCI6MTcyMDUzMzUxMn0.gOmK18VbBkUgisDlse9G-ECNsFh7oieu5_YqjgyngL4
 
 
 
 ### Get User Organisations
-GET http://localhost:5500/api/organisations
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiIzZDkwY2E2Ni0xYmY3LTRlYzUtODVmNi02YTBlZTMxMzMzMzkiLCJlbWFpbCI6ImJvYmJ5QGVtYWlsLmNvbSIsImlhdCI6MTcyMDM5NDcwNCwiZXhwIjoxNzIwMzk3NzA0fQ.bCzkAeY4jJ4AW8k3kHDxuvkKz2pjsyTJuMROt__Doc0
+GET https://task-2-postgres.vercel.app/api/organisations
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI3NDNhOWUxMS01ODg1LTQ2NmQtYjViYi0xMWI5NmI3NmU4NzgiLCJlbWFpbCI6InNhbWxhcnJ5bWFybGlhbkBnbWFpbC5jb20iLCJpYXQiOjE3MjA1MzA1MTIsImV4cCI6MTcyMDUzMzUxMn0.gOmK18VbBkUgisDlse9G-ECNsFh7oieu5_YqjgyngL4
 
 
 ###List USERS
-GET http://localhost:5500/api/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiIzZDkwY2E2Ni0xYmY3LTRlYzUtODVmNi02YTBlZTMxMzMzMzkiLCJlbWFpbCI6ImJvYmJ5QGVtYWlsLmNvbSIsImlhdCI6MTcyMDM5NDcwNCwiZXhwIjoxNzIwMzk3NzA0fQ.bCzkAeY4jJ4AW8k3kHDxuvkKz2pjsyTJuMROt__Doc0
+GET https://task-2-postgres.vercel.app/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI3NDNhOWUxMS01ODg1LTQ2NmQtYjViYi0xMWI5NmI3NmU4NzgiLCJlbWFpbCI6InNhbWxhcnJ5bWFybGlhbkBnbWFpbC5jb20iLCJpYXQiOjE3MjA1MzA1MTIsImV4cCI6MTcyMDUzMzUxMn0.gOmK18VbBkUgisDlse9G-ECNsFh7oieu5_YqjgyngL4
 
 ### LOGIN USER
-POST http://localhost:5500/api/auth/login
+POST https://task-2-postgres.vercel.app/api/auth/login
 Content-Type: application/json
 
 {
@@ -62,11 +62,11 @@ Content-Type: application/json
 }
 
 ###REFRESH TOKENS
-GET http://localhost:5500/api/auth/refresh_token
+GET https://task-2-postgres.vercel.app/api/auth/refresh_token
 
 ###
 
-DELETE http://localhost:5500/api/auth/refresh_token
+DELETE https://task-2-postgres.vercel.app/api/auth/refresh_token
 ###
 
-DELETE http://localhost:5500/api/users
+DELETE https://task-2-postgres.vercel.app/api/users
