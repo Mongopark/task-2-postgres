@@ -114,8 +114,8 @@ router.post(
     } catch (error) {
       res.status(400).json({ 
         status: "Bad request",
-        // message: error.message,
-        message: "Registration Unsuccessful",
+        message: error.message,
+        // message: "Registration Unsuccessful",
         statusCode: 400
       });
     }
