@@ -17,6 +17,7 @@ router.post('/login', async (req, res) => {
     const validPassword = await bcrypt.compare(password, users.rows[0].password);
     if (!validPassword) return res.status(401).json({ error: "Incorrect password" });
 
+    
     // JWT
     let tokens = jwtTokens(users.rows[0]); // Gets access and refresh tokens
     res.cookie('refresh_token', tokens.refreshToken, { ...(process.env.COOKIE_DOMAIN && { domain: process.env.COOKIE_DOMAIN }), httpOnly: true, sameSite: 'none', secure: true });
