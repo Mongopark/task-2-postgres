@@ -1,10 +1,12 @@
-import { Pool } from 'pg';
+import pkg from 'pg';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 
 dotenv.config();
+
+const { Pool } = pkg;
 
 const pool = new Pool({
   connectionString: process.env.POSTGRES_URL,
