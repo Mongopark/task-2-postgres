@@ -1,11 +1,10 @@
-import pg from 'pg';
+import { Pool } from 'pg';
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 
 dotenv.config();
-
-const { Pool } = pg;
 
 const pool = new Pool({
   connectionString: process.env.POSTGRES_URL,
@@ -14,6 +13,8 @@ const pool = new Pool({
   }
 });
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const sqlPath = path.join(__dirname, 'database.sql');
 const sql = fs.readFileSync(sqlPath).toString();
 
